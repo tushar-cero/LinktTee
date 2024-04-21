@@ -20,24 +20,38 @@
     <meta name="keywords" content="Links, Cero">
     <title>Cero Links</title>
     <link rel="shortcut icon" href="./favicon_io/favicon.ico">
+
+    <style>
+        .un-ordered-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 24px;
+        }
+        @media (min-width: 720px) {
+            .un-ordered-list {
+                flex: none;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <main class="relative h-screen flex flex-col justify-center items-center">
-        <div class="w-full h-full max-w-md mx-auto p-6">
+        <div class="w-full h-full p-6">
             <h1 class="text-3xl font-bold mb-8">My Links</h1>
-            <ul class="flex flex-col gap-4 justify-center item-center w-full pb-6">
-                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2">
-                    <p class="p-4 text-lg">Design Resume</p>
-                    <button onclick="copyToClipboard('Design')" type="button" class="flex gap-2 justify-center items-center px-6 bg-slate-200 border-black rounded-md"> 
-                        <p class=" text-sm">Copy</p> 
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="bg-cyan-400" class="bi bi-clipboard" viewBox="0 0 16 16">
-                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
-                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
-                        </svg></span>
-                    </button>
-                </li>
-                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2">
-                    <p class="p-4 text-lg">PM Resume</p>
+            <!-- <ul class="flex flex-col gap-4 justify-center item-center w-full pb-6 lg:flex-none lg:grid-cols-2 lg:gap-4"> -->
+            <ul class="un-ordered-list">
+                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2 w-full">
+                    <p class="p-3 text-lg flex gap-4"><img class='rounded-sm' src="https://asset.brandfetch.io/idn6fNST_9/idM9AhRj5-.png" alt="logo" height="32px" width="32px"/> PM Resume</p>
                     <button onclick="copyToClipboard('PM')" type="button" class="flex gap-2 justify-center items-center px-6 bg-slate-200 border-black rounded-md"> 
                         <p class=" text-sm">Copy</p> 
                         <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="bg-cyan-400" class="bi bi-clipboard" viewBox="0 0 16 16">
@@ -46,8 +60,18 @@
                         </svg></span>
                     </button>
                 </li>
-                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2">
-                    <p class="p-4 text-lg">Dev Resume</p>
+                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2 w-full">
+                    <p class="p-3 text-lg flex gap-4"><img class='rounded-sm' src="https://asset.brandfetch.io/idn6fNST_9/idM9AhRj5-.png" alt="logo" height="32px" width="32px"/> Design Resume</p>
+                    <button onclick="copyToClipboard('Design')" type="button" class="flex gap-2 justify-center items-center px-6 bg-slate-200 border-black rounded-md"> 
+                        <p class=" text-sm">Copy</p> 
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="bg-cyan-400" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                        </svg></span>
+                    </button>
+                </li>
+                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2 w-full">
+                    <p class="p-3 text-lg flex gap-4"><img class='rounded-sm' src="https://asset.brandfetch.io/idn6fNST_9/idM9AhRj5-.png" alt="logo" height="32px" width="32px"/> Dev Resume</p>
                     <button onclick="copyToClipboard('Dev')" type="button" class="flex gap-2 justify-center items-center px-6 bg-slate-200 border-black rounded-md"> 
                         <p class=" text-sm">Copy</p> 
                         <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="bg-cyan-400" class="bi bi-clipboard" viewBox="0 0 16 16">
@@ -56,8 +80,8 @@
                         </svg></span>
                     </button>
                 </li>
-                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2">
-                    <p class="p-4 text-lg">LinkedIn</p>
+                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2 w-full">
+                    <p class="p-3 text-lg flex gap-4"><img class='rounded-sm' src="https://asset.brandfetch.io/idbGPuWgz_/ida2097ajd.png" alt="logo" height="32px" width="32px"/> LinkedIn</p>
                     <button onclick="copyToClipboard('Linkedin')" type="button" class="flex gap-2 justify-center items-center px-6 bg-slate-200 border-black rounded-md"> 
                         <p class=" text-sm">Copy</p> 
                         <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="bg-cyan-400" class="bi bi-clipboard" viewBox="0 0 16 16">
@@ -66,8 +90,9 @@
                         </svg></span>
                     </button>
                 </li>
-                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2">
-                    <p class="p-4 text-lg">Behance</p>
+                
+                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2 w-full">
+                    <p class="p-3 text-lg flex gap-4"><img class='rounded-sm' src="https://asset.brandfetch.io/idxhowbknc/idFBGnu3Qm.jpeg" alt="logo" height="32px" width="32px"/> Behance</p>
                     <button onclick="copyToClipboard('Behance')" type="button" class="flex gap-2 justify-center items-center px-6 bg-slate-200 border-black rounded-md"> 
                         <p class=" text-sm">Copy</p> 
                         <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="bg-cyan-400" class="bi bi-clipboard" viewBox="0 0 16 16">
@@ -76,8 +101,8 @@
                         </svg></span>
                     </button>
                 </li>
-                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2">
-                    <p class="p-4 text-lg">Email Address</p>
+                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2 w-full">
+                    <p class="p-3 text-lg flex gap-4"><img class='rounded-sm' src="https://asset.brandfetch.io/id5o3EIREg/id6PVBBFQj.svg" alt="logo" height="32px" width="32px"/> Email Address</p>
                     <button onclick="copyToClipboard('Email Address')" type="button" class="flex gap-2 justify-center items-center px-6 bg-slate-200 border-black rounded-md"> 
                         <p class=" text-sm">Copy</p> 
                         <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="bg-cyan-400" class="bi bi-clipboard" viewBox="0 0 16 16">
@@ -86,8 +111,8 @@
                         </svg></span>
                     </button>
                 </li>
-                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2">
-                    <p class="p-4 text-lg">Personal Website</p>
+                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2 w-full">
+                    <p class="p-3 text-lg flex gap-4"><img class='rounded-sm' src="https://asset.brandfetch.io/id6O2oGzv-/idvNIQR3p7.svg" alt="logo" height="32px" width="32px"/> Personal Website</p>
                     <button onclick="copyToClipboard('Personal Website')" type="button" class="flex gap-2 justify-center items-center px-6 bg-slate-200 border-black rounded-md"> 
                         <p class=" text-sm">Copy</p> 
                         <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="bg-cyan-400" class="bi bi-clipboard" viewBox="0 0 16 16">
@@ -96,8 +121,8 @@
                         </svg></span>
                     </button>
                 </li>
-                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2">
-                    <p class="p-4 text-lg">Twitter</p>
+                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2 w-full">
+                    <p class="p-3 text-lg flex gap-4"><img class='rounded-sm' src="https://asset.brandfetch.io/idS5WhqBbM/id-opmlNbH.svg" alt="logo" height="32px" width="32px"/> Twitter</p>
                     <button onclick="copyToClipboard('Twitter')" type="button" class="flex gap-2 justify-center items-center px-6 bg-slate-200 border-black rounded-md"> 
                         <p class=" text-sm">Copy</p> 
                         <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="bg-cyan-400" class="bi bi-clipboard" viewBox="0 0 16 16">
@@ -106,8 +131,8 @@
                         </svg></span>
                     </button>
                 </li>
-                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2">
-                    <p class="p-4 text-lg">Github</p>
+                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2 w-full">
+                    <p class="p-3 text-lg flex gap-4"><img class='rounded-sm' src="https://asset.brandfetch.io/idZAyF9rlg/id6a3YYV60.svg" alt="logo" height="32px" width="32px"/> Github</p>
                     <button onclick="copyToClipboard('Github')" type="button" class="flex gap-2 justify-center items-center px-6 bg-slate-200 border-black rounded-md"> 
                         <p class=" text-sm">Copy</p> 
                         <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="bg-cyan-400" class="bi bi-clipboard" viewBox="0 0 16 16">
@@ -116,8 +141,8 @@
                         </svg></span>
                     </button>
                 </li>
-                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2">
-                    <p class="p-4 text-lg">Substack</p>
+                <li class="flex justify-between item-center rounded-lg bg-slate-100 p-2 w-full">
+                    <p class="p-3 text-lg flex gap-4"><img class='rounded-sm' src="https://images.prismic.io/beehiiv/6585f6da531ac2845a26e895_Substack.png" alt="logo" height="32px" width="32px"/> Substack</p>
                     <button onclick="copyToClipboard('Substack')" type="button" class="flex gap-2 justify-center items-center px-6 bg-slate-200 border-black rounded-md"> 
                         <p class=" text-sm">Copy</p> 
                         <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="bg-cyan-400" class="bi bi-clipboard" viewBox="0 0 16 16">
@@ -127,41 +152,73 @@
                     </button>
                 </li> 
             </ul>
-        </main>
+        </div>
+    </main>
+    <div id="toast-success" class="hidden absolute bottom-6 right-6 flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
+        <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+            </svg>
+            <span class="sr-only">Check icon</span>
+        </div>
+        <div class="ms-3 text-sm font-normal">Copied successfully!</div>
     </div>
+
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+        function showToast() {
+            const toast = document.getElementById('toast-success');
+            if (!toast.classList.contains('hidden')) {
+                toast.classList.add('hidden');
+            }
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
         function copyToClipboard(location) {
             switch (location) {
                 case "PM":
                     navigator.clipboard.writeText('https://docs.google.com/document/d/1RVQZ3EiT_Q_Kr_tCqsJ3JsNTVLmKaW-vt0QQYlwQA-Y/');
+                    showToast();
                     break;
                 case "Dev":
                     navigator.clipboard.writeText('https://docs.google.com/document/d/1VEsOZE7oXyow0E6mvJAwUCHGBFHZMWFEX5yhuPQEydY');
+                    showToast();
                     break;
                 case "Design":
                     navigator.clipboard.writeText('https://docs.google.com/document/d/1snZ1U7wMT4vw3JIRE6qbSElRcS5I-6pKKesDl4Ni7l8');
+                    showToast();
                     break;
                 case "Linkedin":
                     navigator.clipboard.writeText('https://www.linkedin.com/in/tushar-cero/');
+                    showToast();
                     break;
                 case "Behance":
                     navigator.clipboard.writeText('https://www.behance.net/tushar_cero');
+                    showToast();
                     break;
                 case "Email Address":
                     navigator.clipboard.writeText('tusharsingh.contact@gmail.com');
+                    showToast();
                     break;
                 case "Personal Website":
                     navigator.clipboard.writeText('https://tusharsinghofficial.netlify.app/');
+                    showToast();
                     break;
                 case "Twitter":
                     navigator.clipboard.writeText('https://twitter.com/tushar_cero');
+                    showToast();
                     break;
                 case "Github":
                     navigator.clipboard.writeText('https://github.com/tushar-cero');
+                    showToast();
                     break;
                 case "Substack":
                     navigator.clipboard.writeText('https://tusharcero.substack.com/publish/posts');
+                    showToast();
                     break;
                 default:
                     break;
